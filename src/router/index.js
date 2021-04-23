@@ -68,11 +68,6 @@ export const constantRoutes = [
     hidden: true
   },
   {
-    path: '/refresh',
-    component: () => import('@/components/kong/index'),
-    hidden: true
-  },
-  {
     path: '/',
     component: Layout,
     redirect: '/dashboard',

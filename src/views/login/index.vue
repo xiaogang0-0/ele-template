@@ -159,14 +159,13 @@ export default {
             "password": this.loginForm.password,
             "moduleId":5,
           };
-          return
           Api.loginInit(param).then(res => {
             this.loading = false;
             if(res.code == 200) {
               // 本地存储token
               setToken(res.data.access_token)
               
-              localStorage.setItem ('Siw-userInfo',JSON.stringify(res.data))
+              localStorage.setItem ('ShoppingMall_userInfo',JSON.stringify(res.data))
               // 后台获取路由
               Api.getMenu().then(res => {
                 let {code,data,msg,total} = res
@@ -174,7 +173,7 @@ export default {
                 if(code == 200){
                   // 后台获取回來的路由
                   let menuList = data;
-                  localStorage.setItem ('Siw-menuList',JSON.stringify(data))
+                  localStorage.setItem ('ShoppingMall_menuList',JSON.stringify(data))
                   window.location.reload()
                   // console.log(componentsRouter,'本地的目录')
                   return 
@@ -215,10 +214,10 @@ export default {
                       
             
                 }else{
-                  localStorage.removeItem('Siw-menuList')
+                  localStorage.removeItem('ShoppingMall_menuList')
                 }
               }).catch( error => {
-                localStorage.removeItem('Siw-menuList')
+                localStorage.removeItem('ShoppingMall_menuList')
               })
 
               // this.$router.push({path:'/'})
@@ -227,8 +226,8 @@ export default {
             }
 
           }).catch( error => {
-            localStorage.removeItem('Siw_userInfo');
-            localStorage.removeItem('Siw-menuList')
+            localStorage.removeItem('ShoppingMall_userInfo');
+            localStorage.removeItem('ShoppingMall_menuList')
             this.loading = false
           })
             

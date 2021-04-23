@@ -35,3 +35,12 @@ export function getMenu() {
     // headers: headers_
   })
 }
+
+// 商品导入购物车excel上传  /biw-rfq/rfq/sys/file/file-upload
+export function uploadFiles(data) {
+  return request({
+    url: '/biw-rfq/rfq/sys/file/file-upload',
+    method: 'post',
+    data
+  })
+}

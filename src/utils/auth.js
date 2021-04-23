@@ -1,6 +1,6 @@
 import Cookies from 'js-cookie'
 
-const TokenKey = 'Siw-Token'
+const TokenKey = 'ShoppingMall_Token'
 
 export function getToken() {
   return Cookies.get(TokenKey)

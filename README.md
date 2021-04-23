@@ -170,6 +170,33 @@ npm run lint -- --fix
   sessionStorage.removeItem('')
   sessionStorage.setItem()
   localStorage.setItem()
+
+  import { getToken, removeToken, setToken } from '@/utils/auth' // 从cookie获取令牌
+
 ###  命名字段
-    hlwl_shoppingMall
-    和力物联商城
+ <!-- 后台权限本地存储字段 -->
+    ShoppingMall_menuList
+    <!-- 和力物联商城 -->
+    ShoppingMall
+
+    <!-- 用户信息 字段 -->
+    ShoppingMall_userInfo
+    <!-- token 字段 -->
+    ShoppingMall_Token
+   
+
+
+
+components/Pagination
+
+  ## 待完成
+  1. 首页修改  默认登陆页 改成默认首页   
+  1. 导航   暂时免登录
+  1. 组建清空
+  1. api 清空 
+
+  1. 全局看一下 没用的文件 有无清楚干净
+
+
+  #待确定  
+  路由首位 用白名单 还是取消token 限制  应该是取消token 拦截

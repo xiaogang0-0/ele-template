@@ -106,8 +106,8 @@ service.interceptors.response.use(
       })
       setTimeout(()=>{
           removeToken();
-          localStorage.removeItem("Siw-userInfo");
-          localStorage.removeItem("Siw-menuList");
+          localStorage.removeItem("ShoppingMall_userInfo");
+          localStorage.removeItem("ShoppingMall_menuList");
           Router.push({ path: "/login" });
       },2000)
     } else {

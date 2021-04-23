@@ -8,9 +8,7 @@
     /> -->
 
     <!-- <breadcrumb id="breadcrumb-container" class="breadcrumb-container" /> -->
-    <div>
-      
-    </div>
+
     <div class="right-menu">
       <span class="userName el-breadcrumb app-breadcrumb breadcrumb-container">{{userName}}</span>
 
@@ -79,7 +77,6 @@ import * as Api from "@/api/login";
 import { mapGetters } from "vuex";
 import Breadcrumb from "@/components/Breadcrumb";
 import Hamburger from "@/components/Hamburger";
-import Search from "@/components/HeaderSearch";
 import usImg from "@/assets/userImg.png";
 import { removeToken } from "@/utils/auth";
 
@@ -87,7 +84,6 @@ export default {
   components: {
     Breadcrumb,
     Hamburger,
-    Search,
   },
   data() {
     return {
@@ -103,8 +99,8 @@ export default {
     ...mapGetters(["sidebar", "avatar"]),
   },
   created() {
-    this.userName = JSON.parse(localStorage.getItem("Siw-userInfo"))
-      ? JSON.parse(localStorage.getItem("Siw-userInfo")).username
+    this.userName = JSON.parse(localStorage.getItem("ShoppingMall_userInfo"))
+      ? JSON.parse(localStorage.getItem("ShoppingMall_userInfo")).username
       : "";
   },
   methods: {
@@ -125,8 +121,8 @@ export default {
           if (res.code == 200) {
             //   console.log(res.data.msg);
             removeToken();
-            localStorage.removeItem("Siw-userInfo");
-            localStorage.removeItem("Siw-menuList");
+            localStorage.removeItem("ShoppingMall_userInfo");
+            localStorage.removeItem("ShoppingMall_menuList");
             // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
             this.$router.push({ path: "/login" });
           }
@@ -134,9 +130,9 @@ export default {
         .catch((_) => {
           // console.log(err);
           removeToken();
-          localStorage.removeItem("Siw-userInfo");
-          localStorage.removeItem("Siw-menuList");
-          // sessionStorage.removeItem('Siw-menuList')
+          localStorage.removeItem("ShoppingMall_userInfo");
+          localStorage.removeItem("ShoppingMall_menuList");
+          // sessionStorage.removeItem('ShoppingMall_menuList')
           // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
           this.$router.push({ path: "/login" });
         });
