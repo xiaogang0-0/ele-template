@@ -117,9 +117,7 @@ export default {
     logout() {
       Api.landingExit("")
         .then((res) => {
-          // console.log(res)
           if (res.code == 200) {
-            //   console.log(res.data.msg);
             qs.removeToken();
             qs.removeUserInfo()
             localStorage.removeItem("ShoppingMall_menuList");
@@ -128,7 +126,6 @@ export default {
           }
         })
         .catch((_) => {
-          // console.log(err);
           qs.removeToken();
           qs.removeUserInfo()
           localStorage.removeItem("ShoppingMall_menuList");
@@ -158,7 +155,6 @@ export default {
           type: "warning",
         });
       } else {
-        // console.log('调接口');
         var param = {
           oldPassword: this.oldPassword,
           password: this.password,
@@ -174,19 +170,14 @@ export default {
                 this.oldPassword ='';
                 this.password='';
                 this.confirmPassword='';
-                // console.log(456);
               } else {
-                // console.log(123);
-
                 this.$message({
                   message: res.msg,
                   type: "warning",
                 });
               }
-              // console.log(res);
             })
             .catch((_) => {
-              // console.log(err);
             });
           this.centerDialogVisible = false;
         } else {

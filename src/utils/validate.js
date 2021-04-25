@@ -194,9 +194,7 @@ export function inputChange(item, tag, lengths) {
     .replace(/\-/g, "")
     .replace("$#$", "-")
     .replace(/(?<=\d)-$|(?<=\.)-$/g, "");
-  console.log(item[tag]);
   // let symbol = item[tag][0] == '-' ? '-' : ''
-  // console.log(symbol)
   if (lengths == 2) {
     item[tag] = item[tag].replace(/^(\-)*(\d+)\.(\d{0,2}).*$/, "$1$2.$3");
   }
