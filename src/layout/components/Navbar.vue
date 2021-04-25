@@ -78,7 +78,7 @@ import { mapGetters } from "vuex";
 import Breadcrumb from "@/components/Breadcrumb";
 import Hamburger from "@/components/Hamburger";
 import usImg from "@/assets/userImg.png";
-import { removeToken } from "@/utils/auth";
+import  * as  qs from "@/utils/auth";
 
 export default {
   components: {
@@ -99,8 +99,8 @@ export default {
     ...mapGetters(["sidebar", "avatar"]),
   },
   created() {
-    this.userName = localStorage.getItem("ShoppingMall_userInfo")
-      ? JSON.parse(localStorage.getItem("ShoppingMall_userInfo")).username
+    this.userName = qs.getUserInfo()
+      ? JSON.parse(qs.getUserInfo()).username
       : "";
   },
   methods: {
@@ -120,8 +120,8 @@ export default {
           // console.log(res)
           if (res.code == 200) {
             //   console.log(res.data.msg);
-            removeToken();
-            localStorage.removeItem("ShoppingMall_userInfo");
+            qs.removeToken();
+            qs.removeUserInfo()
             localStorage.removeItem("ShoppingMall_menuList");
             // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
             this.$router.push({ path: "/login" });
@@ -129,8 +129,8 @@ export default {
         })
         .catch((_) => {
           // console.log(err);
-          removeToken();
-          localStorage.removeItem("ShoppingMall_userInfo");
+          qs.removeToken();
+          qs.removeUserInfo()
           localStorage.removeItem("ShoppingMall_menuList");
           // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
           this.$router.push({ path: "/login" });

@@ -44,7 +44,7 @@ router.beforeEach(async(to, from, next) => {
           // 动态添加可访问的路由
           // console.log('动态添加可访问的路由')
           // 后台获取回來的路由
-          let menuList = JSON.parse(localStorage.getItem ('ShoppingMall_menuList'))
+          // let menuList = JSON.parse(localStorage.getItem ('ShoppingMall_menuList'))
           // console.log(menuList,'后台获取回來的路由')
           // console.log(accessRoutes,'本地的目录')
           // 循环后台的权限

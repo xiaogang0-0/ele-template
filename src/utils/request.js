@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { MessageBox, Message } from 'element-ui'
 import store from '@/store'
-import { getToken, removeToken } from '@/utils/auth'
+import { getToken, removeToken, removeUserInfo} from '@/utils/auth'
 import Router from '../router'
 
 
@@ -94,7 +94,8 @@ service.interceptors.response.use(
       })
       setTimeout(()=>{
           removeToken();
-          localStorage.removeItem("ShoppingMall_userInfo");
+          removeUserInfo()
+
           localStorage.removeItem("ShoppingMall_menuList");
           Router.push({ path: "/login" });
       },2000)

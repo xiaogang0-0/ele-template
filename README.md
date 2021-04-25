@@ -171,7 +171,7 @@ npm run lint -- --fix
   sessionStorage.setItem()
   localStorage.setItem()
 
-  import { getToken, removeToken, setToken } from '@/utils/auth' // 从cookie获取令牌
+  import { getToken, removeToken, setToken, getUserInfo, setUserInfo, removeUserInfo } from '@/utils/auth' // 从cookie获取令牌
 
 ###  命名字段
  <!-- 后台权限本地存储字段 -->
@@ -180,16 +180,15 @@ npm run lint -- --fix
     ShoppingMall
 
     <!-- 用户信息 字段 -->
-    ShoppingMall_userInfo
+    ShoppingMall_userInfo (cookies存储)
     <!-- token 字段 -->
-    ShoppingMall_Token
+    ShoppingMall_Token    (cookies存储)
 
    内容区域的公用className
    app-container
 
 
 
-components/qiniu
 
   ## 待完成
   <!-- 1. 首页修改       默认登陆页 改成默认首页    -->
