@@ -1,3 +1,4 @@
+// 无权限首页
 <template>
   <div class="dashboard-editor-container">
     <div class=" clearfix">

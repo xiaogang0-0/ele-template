@@ -22,6 +22,27 @@ const componentsRouter = [
   //   ]
   // },
 
+    {
+    path: '/home',
+    component: Layout,
+    name: 'home',
+    meta: { title: '', icon: 'documentation' },
+    children: [
+      {
+        path: '/home',
+        component: () => import('@/views/home/index'),
+        name: 'home',
+        meta: { title: 'home页', icon: 'list' },
+        children: []
+      },
+    ]
+  },
+
+ 
+  
+
+ 
+
 ]
 
 export default componentsRouter

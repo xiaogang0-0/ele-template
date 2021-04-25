@@ -183,17 +183,19 @@ npm run lint -- --fix
     ShoppingMall_userInfo
     <!-- token 字段 -->
     ShoppingMall_Token
-   
+
+   内容区域的公用className
+   app-container
 
 
 
 components/qiniu
 
   ## 待完成
-  1. 首页修改       默认登陆页 改成默认首页   
+  <!-- 1. 首页修改       默认登陆页 改成默认首页    -->
   1. 导航搬家到表头   暂时免登录
-  1. 组建清空
-  1. 全局看一下 没用的文件 有无清楚干净
+  <!-- 1. 组建清空 -->
+  <!-- 1. 全局看一下 没用的文件 有无清楚干净 -->
 
 
   #待确定  

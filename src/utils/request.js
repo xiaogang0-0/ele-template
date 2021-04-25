@@ -26,7 +26,6 @@ const service = axios.create({
 service.interceptors.request.use(
   config => {
     // 在发送请求之前做点什么
-
     // if (store.getters.token) {
     //   // let each request carry token
     //   // ['X-Token'] is a custom headers key
@@ -52,20 +51,9 @@ service.interceptors.request.use(
 
 // 响应拦截器
 service.interceptors.response.use(
-  /**
-   * If you want to get http information such as headers or status
-   * Please return  response => response
-  */
 
-  /**
-   * Determine the request status by custom code
-   * Here is just an example
-   * You can also judge the status by HTTP Status Code
-   */
   response => {
     const res = response.data
-
-    // if the custom code is not 20000, it is judged as an error.
     if (res.code !== 200) {
       if (res.msg) {
         Message({

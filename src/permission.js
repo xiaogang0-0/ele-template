@@ -11,8 +11,6 @@ NProgress.configure({ showSpinner: false }) // 进程配置
 // 没有重定向白名单
 const whiteList = ['/login','/dashboard', '/auth-redirect', '/404'] 
 
-
-
 router.beforeEach(async(to, from, next) => {
   // console.log(to)
   // 开始进度条
@@ -23,7 +21,6 @@ router.beforeEach(async(to, from, next) => {
   const hasToken = getToken()
 
   if (hasToken) {
-    // console.log(to.path,'to.path')
     if (to.path === '/login') {
       // 如果已登录，请重定向到主页
       next({ path: '/' })
