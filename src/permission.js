@@ -48,27 +48,27 @@ router.beforeEach(async(to, from, next) => {
           // console.log(menuList,'后台获取回來的路由')
           // console.log(accessRoutes,'本地的目录')
           // 循环后台的权限
-          menuList.forEach(item => {
-            // 循环本地的目录
-            accessRoutes.forEach(ele => {
-              // 一级导航选中项
-              if(item.name == ele.name ){
-                // 一级路由设定
-                ele.hidden = false;
-                // 循环权限设定二级导航
-                item.children.forEach(child => {
-                  // 循环本地对比
-                  ele.children.forEach(chd => {
-                    if(child.name == chd.name ){
-                      // console.log(child,'child.name ')
-                      chd.hidden = false;
-                    }
-                  });
+          // menuList.forEach(item => {
+          //   // 循环本地的目录
+          //   accessRoutes.forEach(ele => {
+          //     // 一级导航选中项
+          //     if(item.name == ele.name ){
+          //       // 一级路由设定
+          //       ele.hidden = false;
+          //       // 循环权限设定二级导航
+          //       item.children.forEach(child => {
+          //         // 循环本地对比
+          //         ele.children.forEach(chd => {
+          //           if(child.name == chd.name ){
+          //             // console.log(child,'child.name ')
+          //             chd.hidden = false;
+          //           }
+          //         });
                   
-                });
-              }
-            });
-          });
+          //       });
+          //     }
+          //   });
+          // });
           // console.log('accessRoutes')
           store.commit('permission/SET_ROUTES', accessRoutes)
           router.addRoutes(accessRoutes)
