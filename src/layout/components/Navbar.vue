@@ -99,7 +99,7 @@ export default {
     ...mapGetters(["sidebar", "avatar"]),
   },
   created() {
-    this.userName = JSON.parse(localStorage.getItem("ShoppingMall_userInfo"))
+    this.userName = localStorage.getItem("ShoppingMall_userInfo")
       ? JSON.parse(localStorage.getItem("ShoppingMall_userInfo")).username
       : "";
   },
@@ -132,7 +132,6 @@ export default {
           removeToken();
           localStorage.removeItem("ShoppingMall_userInfo");
           localStorage.removeItem("ShoppingMall_menuList");
-          // sessionStorage.removeItem('ShoppingMall_menuList')
           // this.$router.push(`/login?redirect=${this.$route.fullPath}`)
           this.$router.push({ path: "/login" });
         });
