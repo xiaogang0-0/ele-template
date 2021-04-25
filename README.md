@@ -192,7 +192,21 @@ npm run lint -- --fix
 
 
   ## 待完成
-  2.  导航搬家到表头 
+  2.  导航搬家到表头   Sidebar  
+  <el-scrollbar wrap-class="scrollbar-wrapper">
+      <el-menu
+        :default-active="activeMenu"
+        :collapse="isCollapse"
+        :background-color="variables.menuBg"
+        :text-color="variables.menuText"
+        :unique-opened="false"
+        :active-text-color="variables.menuActiveText"
+        :collapse-transition="false"
+        mode="vertical"
+      >
+        <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
+      </el-menu>
+    </el-scrollbar>
 
   <!-- 1. 全局看一下 没用的文件 有无清楚干净 -->
   <!-- 1. 组建清空 -->
