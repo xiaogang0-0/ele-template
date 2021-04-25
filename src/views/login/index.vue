@@ -177,62 +177,7 @@ export default {
                 // 本地存储token
                 setToken(res.data.access_token);
                 setUserInfo(JSON.stringify(res.data));
-
-                      window.location.reload();
-                return 
-                // 后台获取路由
-                Api.getMenu()
-                  .then((res) => {
-                    let { code, data, msg, total } = res;
-
-                    if (code == 200) {
-                      // 后台获取回來的路由
-                      let menuList = data;
-
-                      localStorage.setItem(
-                        "ShoppingMall_menuList",
-                        JSON.stringify(data)
-                      );
-                      window.location.reload();
-                      // console.log(componentsRouter,'本地的目录')
-                      return;
-                      // 循环后台的权限
-                      // menuList.forEach(item => {
-                      //   console.log(item,'item后台权限')
-                      //   // 循环本地的目录
-                      //   componentsRouter.forEach(ele => {
-                      //     // 一级导航选中项
-                      //     if(item.name == ele.name ){
-                      //       // 一级路由设定
-                      //       ele.hidden = false;
-                      //       item.children.forEach(child => {
-                      //         // 循环本地对比
-                      //         ele.children.forEach(chd => {
-                      //           if(child.name == chd.name ){
-                      //             console.log(child,'child.name ')
-                      //             chd.hidden = false;
-                      //           }else{
-                      //             chd.hidden = true;
-                      //           }
-                      //         });
-                      //       });
-                      //     }else{
-                      //        ele.hidden = true;
-                      //     }
-                      //   });
-                      //   // this.$store.commit('permission/SET_ROUTES', componentsRouter)
-                      //   // this.$router.addRoutes(componentsRouter)
-                      //   // this.$router.push({path: '/'})
-                      //   window.location.reload()
-                      // });
-                    } else {
-                      localStorage.removeItem("ShoppingMall_menuList");
-                    }
-                  })
-                  .catch((error) => {
-                    localStorage.removeItem("ShoppingMall_menuList");
-                  });
-                // this.$router.push({path:'/'})
+                window.location.reload();
               }
             })
             .catch((error) => {
