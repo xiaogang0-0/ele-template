@@ -4,27 +4,10 @@ import Layout from '@/layout'
 
 const componentsRouter = [
   // 这里配置页面的路由
-  // 模版
-  // {
-  //   path: '/',
-  //   component: Layout,
-  //   redirect: '', // 重定向
-  //   name: '',
-  //   meta: { title: '', icon: 'documentation' },
-  //   children: [
-  //     {
-  //       path: '',
-  //       component: () => import('@/views/login/index'),
-  //       name: '',
-  //       meta: { title: '', icon: 'list' },
-  //       children: []
-  //     },
-  //   ]
-  // },
-
     {
     path: '/home',
     component: Layout,
+    // redirect: '', // 重定向
     name: 'home',
     meta: { title: '', icon: 'documentation' },
     children: [

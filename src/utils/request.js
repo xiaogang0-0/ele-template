@@ -32,14 +32,13 @@ service.interceptors.request.use(
     //   // 请根据实际情况修改
     //   config.headers['X-Token'] = getToken()
     // }
-    // 统一携带tooken
+    // 统一携带token
     if (getToken()) {
       config.headers = {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer ' + getToken()
       }
     }
-
     return config
   },
   error => {
@@ -51,7 +50,6 @@ service.interceptors.request.use(
 
 // 响应拦截器
 service.interceptors.response.use(
-
   response => {
     const res = response.data
     if (res.code !== 200) {
@@ -64,20 +62,6 @@ service.interceptors.response.use(
       } else {
         return Promise.reject(res)
       }
-      // 50008: Illegal token; 50012: Other clients logged in; 50014: Token expired;
-      // if (res.code === 50008 || res.code === 50012 || res.code === 50014) {
-      //   // to re-login
-      //   MessageBox.confirm('You have been logged out, you can cancel to stay on this page, or log in again', 'Confirm logout', {
-      //     confirmButtonText: 'Re-Login',
-      //     cancelButtonText: 'Cancel',
-      //     type: 'warning'
-      //   }).then(() => {
-      //     store.dispatch('user/resetToken').then(() => {
-      //       location.reload()
-      //     })
-      //   })
-      // }
-      /* return Promise.reject(new Error(res.message || res.msg || 'Error')) */
     } else {
       return res
     }

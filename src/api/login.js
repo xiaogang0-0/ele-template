@@ -1,5 +1,6 @@
 import request from '@/utils/request'
 
+
 // 登录
 export function loginInit(data) {
   return request({
@@ -27,20 +28,3 @@ export function landingExit(data) {
 }
 
 
-// 获取菜单
-export function getMenu() {
-  return request({
-    url: '/user-center/user/sys/resource/siw/menu',
-    method: 'get',
-    // headers: headers_
-  })
-}
-
-// 商品导入购物车excel上传  /biw-rfq/rfq/sys/file/file-upload
-export function uploadFiles(data) {
-  return request({
-    url: '/biw-rfq/rfq/sys/file/file-upload',
-    method: 'post',
-    data
-  })
-}
