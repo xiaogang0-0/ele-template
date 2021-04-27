@@ -183,7 +183,7 @@ npm run lint -- --fix
     <!-- 用户信息 字段 -->
     ShoppingMall_userInfo (cookies存储)
     <!-- token 字段 -->
-    ShoppingMall_Token    (cookies存储)
+    ShoppingMall_Token    (cookies存储，vueX存储)
 
    内容区域的公用className
    app-container
