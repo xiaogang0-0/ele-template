@@ -159,10 +159,11 @@ npm run lint -- --fix
 
 [在线 Demo](https://panjiachen.github.io/vue-element-admin)
 
+
+
+###  无权限 免登录的 官网类型
 ### 分支说明
   master            1.0版本  
-  dev分支           1.1版本 
-  newOrder1.0分支   4.1版本(新订单系统一期内容2019.10.18)
 
 
 ###  方法
