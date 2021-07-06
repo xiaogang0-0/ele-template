@@ -1,28 +1,21 @@
 <template>
-  <footer class="login-footer ">
-    公用底部
-  </footer>
+  <footer class="login-footer">公用底部</footer>
 </template>
 
 <script>
 export default {
-  name: 'LoginFooter',
+  name: "LoginFooter",
   methods: {
-    operationGuideFn() {
+    serviceFn() {
       this.$router.push({
-        name: 'operationGuide'
-      })
-    }, serviceFn() {
-      this.$router.push({
-        name: 'service'
-      })
-    }
-  }
-}
+        name: "service",
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
-
 .login-footer {
   position: fixed;
   overflow: hidden;
@@ -35,6 +28,5 @@ export default {
   background: #283891;
   color: #fff;
   text-align: center;
-
 }
 </style>

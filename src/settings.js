@@ -1,5 +1,5 @@
 module.exports = {
-  title: '有限空间',
+  title: 'PC架构模版',
 
   /**
    * @type {boolean} true | false

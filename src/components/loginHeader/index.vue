@@ -1,7 +1,7 @@
 // 公用表头
 <template>
   <div class="loginHeader">
-    <h2 class="fl name">有限空间</h2>
+    <h2 class="fl name">PC架构模版</h2>
     <nav class="fr navList">
       <a href="javascript:;" @click="handleGoLogin">企业登录</a>
       <a href="javascript:;" @click="handleGoRegister">企业注册</a>

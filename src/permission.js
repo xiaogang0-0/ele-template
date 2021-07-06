@@ -9,7 +9,7 @@ import getPageTitle from '@/utils/get-page-title'
 NProgress.configure({ showSpinner: false }) // 进程配置
 
 // 没有重定向白名单
-const whiteList = ['/login', '/demo', '/home', '/forgetPassword', '/changePassword', '/register', '/perfectInformation', '/auth-redirect', '/404', '/operationGuide', '/service']
+const whiteList = ['/login', '/demo', '/home', '/forgetPassword', '/changePassword', '/register', '/auth-redirect', '/404', '/service']
 
 router.beforeEach(async(to, from, next) => {
   // console.log(to)

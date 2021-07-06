@@ -51,6 +51,7 @@ npm run lint -- --fix
 
 
 ## 基础架构pc 仓库地址
+  github.com:xiaogang0-0/ele-template.git
 
 ###  方法
   sessionStorage.getItem('')
@@ -71,8 +72,6 @@ npm run lint -- --fix
 
 ## 本地存储搜索信息
 ```bash
-  # 注册通过本地存储
-  'YXKJ_registerInfor'
   # 用户信息
   'YXKJ_userInfo'
   # 权限信息
