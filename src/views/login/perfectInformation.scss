@@ -1,0 +1,170 @@
+
+.cRed {color: #D9001B;}
+.fl{float: left;}
+.fr{float: right;}
+.inline{display: inline-block;}
+.maxWidth60{max-width: 60%;}
+.textR{text-align: right;}
+.mr20{margin-right: 20px;}
+.padTop22 {padding-top: 22px;}
+.bg_blue{
+  background-color: rgba(226, 233, 241, 1);
+}
+.padlr5 {padding:0 5px}
+.btn:hover, .btn:focus {
+  background: #46a6ff;
+  border-color: #b6c1ca;
+  color: #fff;
+}
+.btn {
+    color: #fff;
+    background-color: #1890ff;
+    border-color: #1890ff;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 7px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #DCDFE6;
+    border-color: #DCDFE6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    -webkit-transition: .1s;
+    transition: .1s;
+    font-weight: 400;
+    overflow: visible;
+    text-transform: none;   
+}
+.center {text-align: center;}
+.lineHeight30{line-height: 30px;}
+.padBot10 {padding-bottom: 10px;}
+.bold{font-weight:bold;}
+
+// 完善注册信息
+.perfectInformation {
+  .imgWrap {
+    width: 150px;
+    // height: 150px;
+  }
+  .contWrap{
+    position: relative;
+    min-width: 700px;
+    padding: 20px;
+    // margin-top: 15px;
+    border: 1px solid #ccc;
+  }
+  .contHead {
+    position: absolute;
+    top: -15px;
+    // left: 10px;
+    left: calc(50% - 73px);
+    padding: 0 20px 0 10px;
+    background: #fff;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight:700;
+    color: #304156;
+    
+  }
+  
+
+  .detail_list {
+    line-height: 30px;
+    color: #304156;
+    overflow: hidden;
+
+    &>li.w25 {
+      width: 25%;
+    }
+    // &>li.w50 {
+    //   width: 50%;
+    // }
+    &>li {
+      float: left;
+      width: 50%;
+      margin-bottom: 2px;
+      word-break: break-all;
+      word-wrap: break-word;
+      vertical-align: top;
+      box-sizing: border-box;
+      padding-right: 5px;    
+      box-sizing: border-box;
+      padding-right: 5px;
+      .orderNumber {
+        max-width: 70%;
+        position: relative;
+        display: inline-block;
+        padding-right: 70px;
+        vertical-align: top;
+
+      }
+      .icon,
+      .icon_text{
+        position: absolute;
+        right: -5px;
+        top: 4px;
+        padding:0 5px;
+        min-width: 70px;
+        text-align: center;
+        font-size:14px;
+        line-height: 20px;
+        color: #fff;
+        background-color: rgba(245, 154, 35, 1);
+        border-radius: 6px;
+
+      }
+      .icon_text{
+        color: rgba(245, 154, 35, 1);
+        background-color: #fff;
+
+      }
+      .text {
+        display: inline-block;
+        width: calc( 100% - 100px);
+        vertical-align: top;
+      }
+
+    }
+    
+  }
+  .footerBtn {
+    padding: 30px;
+    text-align: center;
+    button{
+      padding: 10px 30px;
+      margin: 0 20px;
+    }
+  }
+  .nullWrap{
+    position:relative;
+    height:400px; 
+    .nullImg {
+      width: 300px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  // 弹窗
+  .previewImg {
+    img {width:100%;}
+  }
+  // .submitModal {
+  //   .text { display: block;line-height: 30px; text-align: center;}
+  // }
+  
+  
+  
+}

@@ -1,0 +1,209 @@
+{
+  "login": [
+    {
+      "path": "/registrationInforMangeList",
+      "name": "registrationInforMangeList",
+      "meta": {
+        "title": "",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/registrationInforMange",
+          "name": "registrationInforMange",
+          "meta": {
+            "title": "编辑注册资料"
+          },
+          "hidden": false
+        }
+      ]
+    },
+    {
+      "path": "/personnelDatabaseManagement",
+      "name": "personnelDatabaseManagement",
+      "meta": {
+        "title": "人员数据库",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "personnelAdd",
+          "name": "personnelAdd",
+          "meta": {
+            "title": "人员添加"
+          }
+        },
+        {
+          "path": "personnelSearch",
+          "name": "personnelSearch",
+          "meta": {
+            "title": "人员列表"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/constructionRecord",
+      "name": "constructionRecord",
+      "meta": {
+        "title": "施工备案",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/recordOperation/commitment",
+          "name": "commitment",
+          "meta": {
+            "title": "承诺书"
+          }
+        },
+        {
+          "path": "/recordList/index",
+          "name": "recordList",
+          "meta": {
+            "title": "备案列表"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/demonstrationSiteModule",
+      "name": "demonstrationSiteModule",
+      "meta": {
+        "title": "示范工地",
+        "icon": "tree"
+      },
+      "children": [
+        {
+          "path": "/demonstrationSiteModule_page",
+          "name": "demonstrationSiteModule_page",
+          "meta": {
+            "title": "示范工地"
+          }
+        }
+      ]
+    }
+  ],
+  "home": [
+    {
+      "path": "/companyManagementList",
+      "name": "companyManagementList",
+      "meta": {
+        "title": "公司管理",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/companyManagement",
+          "name": "companyManagement",
+          "meta": {
+            "title": "公司管理"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/dataAuditManagementList",
+      "name": "dataAuditManagementList",
+      "meta": {
+        "title": "注册资料审核",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/dataAuditManagement",
+          "name": "dataAuditManagement",
+          "meta": {
+            "title": "注册资料审核"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/recordReviewAdminList",
+      "name": "recordReviewAdminList",
+      "meta": {
+        "title": "备案管理",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/recordReviewAdmin",
+          "name": "recordReviewAdmin",
+          "meta": {
+            "title": "备案管理"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/peopleManagementAdminList",
+      "name": "peopleManagementAdminList",
+      "meta": {
+        "title": "人员管理",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/peopleManagementAdmin",
+          "name": "peopleManagementAdmin",
+          "meta": {
+            "title": "人员管理"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/demonstrationSiteAdminList",
+      "name": "demonstrationSiteAdminList",
+      "meta": {
+        "title": "示范工地",
+        "icon": "chart"
+      },
+      "children": [
+        {
+          "path": "/demonstrationSiteAdmin",
+          "name": "demonstrationSiteAdmin",
+          "meta": {
+            "title": "示范工地列表"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/activityInformation",
+      "name": "activityInformation",
+      "meta": {
+        "title": "活动信息列表",
+        "icon": "documentation"
+      },
+      "children": [
+        {
+          "path": "homeInfo",
+          "name": "homeInfo",
+          "meta": {
+            "title": "活动信息列表"
+          }
+        }
+      ]
+    },
+    {
+      "path": "/informationManagement",
+      "name": "informationManagement",
+      "meta": {
+        "title": "资讯管理",
+        "icon": "tab"
+      },
+      "children": [
+        {
+          "path": "imgList",
+          "name": "imgList",
+          "meta": {
+            "title": "图片管理",
+            "icon": "documentation"
+          }
+        }
+      ]
+    }
+  ]
+}

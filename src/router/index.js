@@ -48,10 +48,52 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/login',
-    component: () => import('@/views/login/index'),
+    path: '/demo',
+    component: () => import('@/views/demo'),
+    name: 'demo',
     hidden: true
   },
+  // 客户端登录
+  {
+    path: '/login',
+    component: () => import('@/views/home_1/index'),
+    name: 'login',
+    hidden: true
+  },
+  // 注册 未登录状态可查看
+  {
+    path: '/register',
+    name: 'register',
+    component: () => import('@/views/home_1/register'),
+    meta: {
+      title: '完善注册信息'
+    },
+    hidden: true
+  },
+
+  // 后台登录
+  {
+    path: '/home',
+    component: () => import('@/views/home_2/index'),
+    name: 'home',
+    hidden: true
+  },
+
+  // 忘记密码 未登录状态可查看
+  {
+    path: '/forgetPassword',
+    name: 'forgetPassword',
+    component: () => import('@/views/login/forgetPassword'),
+    hidden: true
+  },
+  // 修改密码 未登录状态可查看
+  {
+    path: '/changePassword',
+    name: 'changePassword',
+    component: () => import('@/views/login/changePassword'),
+    hidden: true
+  },
+
   {
     path: '/auth-redirect',
     component: () => import('@/views/login/auth-redirect'),
@@ -76,10 +118,13 @@ export const constantRoutes = [
         path: 'dashboard',
         component: () => import('@/views/dashboard/index'),
         name: 'Dashboard',
-        meta: { title: '首页', icon: 'dashboard', affix: true }
+        meta: { title: '首页', icon: 'component', affix: true }
+        // meta: { title: '', icon: 'dashboard', affix: true }
       }
     ]
-  },
+    // hidden:true
+    // hidden:false
+  }
 
 ]
 

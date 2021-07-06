@@ -37,7 +37,7 @@ export function parseTime(time, cFormat) {
   const time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key) => {
     let value = formatObj[key]
     // Note: getDay() returns 0 on Sunday
-    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value ] }
+    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
     if (result.length > 0 && value < 10) {
       value = '0' + value
     }
@@ -163,12 +163,12 @@ export function param2Obj(url) {
   }
   return JSON.parse(
     '{"' +
-      decodeURIComponent(search)
-        .replace(/"/g, '\\"')
-        .replace(/&/g, '","')
-        .replace(/=/g, '":"')
-        .replace(/\+/g, ' ') +
-      '"}'
+    decodeURIComponent(search)
+      .replace(/"/g, '\\"')
+      .replace(/&/g, '","')
+      .replace(/=/g, '":"')
+      .replace(/\+/g, ' ') +
+    '"}'
   )
 }
 
@@ -346,5 +346,39 @@ export function removeClass(ele, cls) {
   if (hasClass(ele, cls)) {
     const reg = new RegExp('(\\s|^)' + cls + '(\\s|$)')
     ele.className = ele.className.replace(reg, ' ')
+  }
+}
+
+// 表格高度根据屏幕高度自适应
+export function tabHeight(tableHeight, tableCost) {
+  if (window.innerHeight > 650) {
+    tableHeight = window.innerHeight - tableCost - 170
+    tableHeight = tableHeight < 300 ? 300 : tableHeight
+    // 监听窗口大小变化
+    const self = this
+    window.onresize = function() {
+      tableHeight = window.innerHeight - tableCost - 170
+      tableHeight = tableHeight < 300 ? 300 : tableHeight
+    }
+  } else {
+    tableHeight = 300 + 'px'
+  }
+  // console.log(
+  //   tableHeight, 'tableHeight', tableCost, 'tableCost', window.innerHeight, 'window.innerHeight'
+  // )
+  return tableHeight
+  // tableHeight表格高度
+  // tableCost：表格距离浏览器的高度
+  // 120表示你想要调整的表格距离底部的高度（你可以自己随意调整），因为我们一般都有放分页组件的，所以需要给它留一个高度
+}
+
+/**
+ * setTableScrollBot设置表格滚动条到底部
+ * refEle表格的ref元素
+ * @param {string} refEle
+ */
+export function setTableScrollBot(refEle) {
+  if (refEle) {
+    refEle.bodyWrapper.scrollTop = refEle.bodyWrapper.scrollHeight
   }
 }

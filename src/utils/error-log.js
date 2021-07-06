@@ -4,6 +4,7 @@ import { isString, isArray } from '@/utils/validate'
 import settings from '@/settings'
 
 // you can set in settings.js
+// errorLog:'production' | ['production', 'development']
 const { errorLog: needErrorLog } = settings
 
 function checkNeed() {

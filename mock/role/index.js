@@ -10,7 +10,7 @@ const roles = [
     name: 'admin',
     description: '超级管理员。有权查看所有页面',
     routes: routes
-  }
+  },
   // {
   //   key: 'editor',
   //   name: 'editor',

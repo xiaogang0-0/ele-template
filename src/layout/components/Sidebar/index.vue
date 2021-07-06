@@ -15,6 +15,10 @@
         <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>
+    <!-- <div v-if="disabled" class="footerIMgWrap">
+      <p class="text">导航底部区域</p>
+    </div> -->
+
   </div>
 </template>
 
@@ -26,6 +30,11 @@ import variables from '@/styles/variables.scss'
 
 export default {
   components: { SidebarItem, Logo },
+  data() {
+    return {
+      disabled: false
+    }
+  },
   computed: {
     ...mapGetters([
       'permission_routes',
@@ -34,6 +43,7 @@ export default {
     activeMenu() {
       const route = this.$route
       const { meta, path } = route
+      // this.disabled = route.name === 'Dashboard' ? false : true
       // if set path, the sidebar will highlight the path you set
       if (meta.activeMenu) {
         return meta.activeMenu
@@ -50,5 +60,27 @@ export default {
       return !this.sidebar.opened
     }
   }
+
 }
 </script>
+<style lang="scss" scoped>
+.footerIMgWrap {
+    width: 100%;
+    padding: 0 10px ;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    // z-index: 99999;
+    text-align: center;
+    .img {
+      width:100%;
+      max-width: 140px;
+    }
+    .text {
+      line-height: 2;
+      font-size: 14px;
+      color: #fff;
+    }
+}
+#app .hideSidebar .sidebar-container .footerIMgWrap .text {display: none;}
+</style>

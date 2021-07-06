@@ -1,4 +1,3 @@
-// 无权限首页
 <template>
   <div class="dashboard-editor-container">
     <div class=" clearfix">
@@ -23,7 +22,7 @@ import PanThumb from '@/components/PanThumb'
 
 export default {
   name: 'DashboardEditor',
-  components: { PanThumb,  },
+  components: { PanThumb },
   data() {
     return {
       emptyGif: 'https://wpimg.wallstcn.com/0e03b7da-db9e-4819-ba10-9016ddfdaed3'
@@ -48,7 +47,7 @@ export default {
 
   .dashboard-editor-container {
     background-color: #e3e3e3;
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
     padding: 50px 60px 0px;
     .pan-info-roles {
       font-size: 12px;
